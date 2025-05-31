@@ -5,7 +5,7 @@ import logo from "../../assets/logo.png";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-function MainHome() {
+const MainHome = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);

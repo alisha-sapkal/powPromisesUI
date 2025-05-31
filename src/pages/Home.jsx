@@ -1,5 +1,5 @@
 import React from 'react'
-import MainHome from '../components/Home/mainHome'
+import MainHome from '../components/Home/MainHome'
 import Section from '../components/Home/Section'
 import CauseForFund from '../components/Home/CauseForFund'
 import WhyStarted from '../components/Home/WhyStarted'
