@@ -38,7 +38,7 @@ function StartFundraising() {
       formDataToSend.append('image', formData.image);
 
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:5000/api/fundraisers', formDataToSend, {
+      const response = await axios.post('/api/fundraisers', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`
