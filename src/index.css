@@ -18,7 +18,6 @@ body {
   place-items: center;
   /* min-width: 320px;
   min-height: 100vh; */
-  background-image: url('/assets/bcimg.png');
   background-attachment: fixed;
   background-size: cover;
   opacity: 100%;
