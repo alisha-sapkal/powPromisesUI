@@ -5,6 +5,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { showSuccessToast, showErrorToast } from "../utils/toast";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 function Auth() {
   const [activeTab, setActiveTab] = useState("signin");
   const [signInData, setSignInData] = useState({ email: "", password: "" });
@@ -32,7 +34,7 @@ function Auth() {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/auth/signin", {
+      const response = await fetch(`${apiUrl}/api/auth/signin`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -72,7 +74,7 @@ function Auth() {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/auth/signup", {
+      const response = await fetch(`${apiUrl}/api/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
