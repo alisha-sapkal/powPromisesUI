@@ -187,6 +187,7 @@ function Auth() {
                     onChange={handleSignUpChange}
                     placeholder="Create a password"
                     required
+                    minLength={8}
                   />
                 </Form.Group>
 
@@ -199,6 +200,7 @@ function Auth() {
                     onChange={handleSignUpChange}
                     placeholder="Confirm your password"
                     required
+                    minLength={8}
                   />
                 </Form.Group>
 
