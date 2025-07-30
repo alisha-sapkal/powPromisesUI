@@ -5,6 +5,8 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 import ThankYou from './ThankYou';
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 function StartFundraising() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -38,7 +40,7 @@ function StartFundraising() {
       formDataToSend.append('image', formData.image);
 
       const token = localStorage.getItem('token');
-      const response = await axios.post('https://powpromisesbackend.onrender.com/api/fundraisers', formDataToSend, {
+      const response = await axios.post(`${apiUrl}/api/fundraisers`, formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`
