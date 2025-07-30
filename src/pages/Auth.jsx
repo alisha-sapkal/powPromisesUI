@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { showSuccessToast, showErrorToast } from "../utils/toast";
 
-const apiUrl = import.meta.env.VITE_API_URL;
+const apiUrl = import.meta.env.DEV ? '' : import.meta.env.VITE_API_URL;
 
 function Auth() {
   const [activeTab, setActiveTab] = useState("signin");

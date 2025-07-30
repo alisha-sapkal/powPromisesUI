@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 import ThankYou from './ThankYou';
 
-const apiUrl = import.meta.env.VITE_API_URL;
+const apiUrl = import.meta.env.DEV ? '' : import.meta.env.VITE_API_URL;
 
 function StartFundraising() {
   const navigate = useNavigate();
