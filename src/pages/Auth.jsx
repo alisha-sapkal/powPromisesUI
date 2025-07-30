@@ -34,7 +34,7 @@ function Auth() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${apiUrl}/api/auth/signin`, {
+      const response = await fetch(`https://powpromisesbackend.onrender.com/api/auth/signin`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -74,7 +74,7 @@ function Auth() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${apiUrl}/api/auth/signup`, {
+      const response = await fetch(`https://powpromisesbackend.onrender.com/api/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
