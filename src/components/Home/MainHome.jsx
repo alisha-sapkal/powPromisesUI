@@ -5,6 +5,8 @@ import logo from "../../assets/logo.png";
 import axios from "axios";
 import { toast } from "react-toastify";
 
+const apiUrl = import.meta.env.DEV ? '' : import.meta.env.VITE_API_URL;
+
 const MainHome = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -62,7 +64,7 @@ const MainHome = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "/api/donations",
+        `${apiUrl}/api/donations`,
         formData,
         {
           headers: {
