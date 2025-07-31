@@ -216,6 +216,21 @@ const MainHome = () => {
                   />
                 </div>
               </div>
+              <div className="mb-3 row">
+                <label className="col-sm-3 col-form-label">Fundraiser ID</label>
+                <div className="col-sm-9">
+                  <input
+                    type="number"
+                    name="fundraiserId"
+                    value={formData.fundraiserId}
+                    onChange={handleChange}
+                    className="form-control"
+                    min="1"
+                    step="0.01"
+                    required
+                  />
+                </div>
+              </div>
               <div className="mb-4 row">
                 <label className="col-sm-3 col-form-label">Amount</label>
                 <div className="col-sm-9">
