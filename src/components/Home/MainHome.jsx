@@ -19,6 +19,7 @@ const MainHome = () => {
     email: "",
     phone: "",
     amount: "",
+    fundraiserId: "",
   });
 
   useEffect(() => {
